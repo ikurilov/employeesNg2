@@ -1,0 +1,26 @@
+<div class="row">
+  <div class="col-md-6">
+    <table class="table table-hover table-striped employees-table">
+      <thead>
+      <tr>
+        <th>ID</th>
+        <th>Фамилия</th>
+        <th>Имя</th>
+        <th>Отчество</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let employee of employees" (click)="selectEmployee(employee)" [ngClass]="{'info' : employeesService.currentEmployee && employeesService.currentEmployee .id === employee.id}">
+        <th scope="row">{{employee.id}}</th>
+        <td>{{employee.lastName}}</td>
+        <td>{{employee.firstName}}</td>
+        <td>{{employee.middleName}}</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="col-md-6">
+    <router-outlet></router-outlet>
+  </div>
+
+</div>

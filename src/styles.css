@@ -1,1 +1,43 @@
-/* You can add global styles to this file, and also import other style files */
+.employees-table tbody:hover {
+  cursor: pointer;
+}
+
+.bottom-buttons {
+  text-align: right;
+}
+
+.bottom-buttons button {
+  margin-left: 10px;
+}
+.main-menu {
+  padding: 15px 0;
+}
+
+.nav-tabs li.active a:hover {
+  cursor: pointer;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+form .error-message {
+  display: block;
+  float: left;
+  margin-bottom: -15px;
+  margin-left: 5px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.form-control.ng-invalid.ng-dirty, .form-control.ng-invalid.ng-touched {
+  border-color: #a94442;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+}
+
+.form-control.ng-invalid.ng-dirty, .form-control.ng-invalid.ng-touched:focus {
+  border-color: #843534;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 6px #ce8483;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 6px #ce8483;
+}

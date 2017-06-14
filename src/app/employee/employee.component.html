@@ -1,0 +1,38 @@
+<div class="page-header">
+  <h2>Изменить информацию
+    <small>сотрудник № {{employee.id}}</small>
+  </h2>
+</div>
+<form #employeeForm="ngForm" class="form-horizontal">
+  <div class="form-group">
+    <label class="col-sm-3 control-label" for="lastName">Фамилия</label>
+    <div class="col-sm-9">
+      <input type="text" class="form-control" [(ngModel)]="employee.lastName" name="lastName" id="lastName" required
+             #lastName="ngModel">
+      <span class="label label-danger error-message" *ngIf="!lastName.valid && !lastName.pristine">Поле "Фамилия" не может быть пустым</span>
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="col-sm-3 control-label" for="firstName">Имя</label>
+    <div class="col-sm-9">
+      <input type="text" class="form-control" name="firstName" [(ngModel)]="employee.firstName" id="firstName" required
+             #firstName="ngModel">
+      <span class="label label-danger error-message" *ngIf="!firstName.valid && !firstName.pristine">Поле "Имя" не может быть пустым</span>
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="col-sm-3 control-label" for="middleName">Отчество</label>
+
+    <div class="col-sm-9">
+      <input type="text" class="form-control" [(ngModel)]="employee.middleName" name="midName" id="middleName" required
+             #middleName="ngModel">
+       <span class="label label-danger error-message" *ngIf="!middleName.valid && !firstName.pristine">Поле "Отчество" не может быть пустым</span>
+    </div>
+  </div>
+</form>
+<div class="bottom-buttons">
+  <button type="button" class="btn btn-primary" (click)="saveEmployee()">
+    Сохранить
+  </button>
+  <button type="button" class="btn btn-danger" ng-click="emp.delEmp()">Удалить</button>
+</div>
